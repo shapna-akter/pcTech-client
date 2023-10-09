@@ -92,7 +92,7 @@ const Header = () => {
                         "https://pc-build-client-shapna28.vercel.app/",
                     });
                   }}
-                  className="text-white hover:text-black font-semibold bg-blue-800 outline-none "
+                  className="text-black hover:text-black font-semibold"
                 >
                   Log out
                 </button>
@@ -102,7 +102,7 @@ const Header = () => {
               <li>
                 <button
                   onClick={logout}
-                  className="text-white hover:text-black font-semibold bg-blue-800 outline-none "
+                  className="text-black hover:text-black font-semibold"
                 >
                   Log out
                 </button>
