@@ -1,6 +1,5 @@
 import MainLayout from "@/components/Layout/MainLayout";
 import ComponentGrid from "@/components/UI/ComponentGrid";
-import React from "react";
 
 const RamPage = ({ pcData }) => {
   return (
@@ -17,7 +16,7 @@ RamPage.getLayout = function getLayout(page) {
 };
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:5000/ram");
+  const res = await fetch("https://pc-build-server.vercel.app/ram");
   const pcData = await res.json();
 
   return {

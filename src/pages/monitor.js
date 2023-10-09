@@ -1,11 +1,10 @@
-import MainLayout from '@/components/Layout/MainLayout';
-import ComponentGrid from '@/components/UI/ComponentGrid';
-import React from 'react';
+import MainLayout from "@/components/Layout/MainLayout";
+import ComponentGrid from "@/components/UI/ComponentGrid";
 
-const MonitorPage = ({pcData}) => {
+const MonitorPage = ({ pcData }) => {
   return (
     <div>
-         <ComponentGrid pcData={pcData}></ComponentGrid>
+      <ComponentGrid pcData={pcData}></ComponentGrid>
     </div>
   );
 };
@@ -17,7 +16,7 @@ MonitorPage.getLayout = function getLayout(page) {
 };
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:5000/monitor");
+  const res = await fetch("https://pc-build-server.vercel.app/monitor");
   const pcData = await res.json();
 
   return {

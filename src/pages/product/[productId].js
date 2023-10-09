@@ -1,7 +1,5 @@
 import MainLayout from "@/components/Layout/MainLayout";
-import { Row } from "antd";
 import Image from "next/image";
-import React from "react";
 
 const ProductDetailsPage = ({ pcData }) => {
   // console.log(pcData.key_features);
@@ -219,7 +217,7 @@ ProductDetailsPage.getLayout = function getLayout(page) {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:5000/pc");
+  const res = await fetch("https://pc-build-server.vercel.app/pc");
   const products = await res.json();
 
   const paths = products.map((product) => ({
@@ -231,7 +229,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context;
-  const res = await fetch(`http://localhost:5000/product/${params.productId}`);
+  const res = await fetch(
+    `https://pc-build-server.vercel.app/product/${params.productId}`
+  );
   const pcData = await res.json();
 
   return {
