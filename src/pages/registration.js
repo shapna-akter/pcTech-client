@@ -37,8 +37,7 @@ export default function Signup() {
   };
 
   return (
-    // <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r bg-gray-400">
+    <div className="flex flex-col items-center justify-center h-screen bg-black">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-white p-8 rounded shadow-md w-96 space-y-6"
