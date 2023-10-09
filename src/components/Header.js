@@ -109,7 +109,7 @@ const Header = () => {
               </button>
             ) : (
               <Link href="/login">
-                <button className="h-8 w-24 bg-gradient-to-r from-violet-500 to-fuchsia-500 border border-none text-white font-bold cursor-pointer">
+                <button className="h-8 lg:w-24 w-16 bg-gradient-to-r from-violet-500 to-fuchsia-500 border border-none text-white font-bold cursor-pointer">
                   Login
                 </button>
               </Link>
