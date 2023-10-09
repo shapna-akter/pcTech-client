@@ -1,12 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-// import { useAuthState } from "react-firebase-hooks/auth";
-// import {
-//   getAuth,
-//   signInWithEmailAndPassword,
-//   signOut as logOut,
-// } from "firebase/auth";
-// import { useRouter } from "next/router";
-
 import { useForm, SubmitHandler } from "react-hook-form";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
@@ -20,7 +11,7 @@ export default function Login() {
   const onSubmit = (data) => {
 
     signIn("github", {
-      callbackUrl: "http://localhost:3000/build-pc",
+      callbackUrl: "https://pc-build-client-shapna28.vercel.app/build-pc",
     });
   };
 

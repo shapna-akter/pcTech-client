@@ -14,7 +14,7 @@ const Header = () => {
 
   const logout = () => {
     logOut(auth);
-    router.push("http://localhost:3000/");
+    router.push("https://pc-build-client-shapna28.vercel.app/");
   };
   return (
     <div className="bg-white flex items-center justify-between lg:container w-[95%] mx-auto p-2 z-50">
@@ -26,39 +26,39 @@ const Header = () => {
           <div className="text-lg px-3  h-8 w-28 bg-gradient-to-r from-violet-500 to-fuchsia-500 border border-none text-white font-bold">
             Categories
           </div>
-          <ul className="absolute bg-black hidden group-hover:block  px-4 py-2 mr-2 space-y-2 list-none w-40">
+          <ul className="absolute bg-fuchsia-800 hidden group-hover:block p-4 space-y-2 list-none w-40 rounded-lg">
             <li>
-              <Link href="/cpu" className="hover:text-white">
+              <Link href="/cpu" className="text-white hover:text-black font-semibold">
                 Processor
               </Link>
             </li>
             <li>
-              <Link href="/motherboard" className="hover:text-white">
+              <Link href="/motherboard" className="text-white hover:text-black font-semibold">
                 Motherboard
               </Link>
             </li>
             <li>
-              <Link href="/ram" className="hover:text-white">
+              <Link href="/ram" className="text-white hover:text-black font-semibold">
                 RAM
               </Link>
             </li>
             <li>
-              <Link href="/psu" className="hover:text-white">
+              <Link href="/psu" className="text-white hover:text-black font-semibold">
                 Power Supply Unit
               </Link>
             </li>
             <li>
-              <Link href="/storage" className="hover:text-white">
+              <Link href="/storage" className="text-white hover:text-black font-semibold">
                 Storage Device
               </Link>
             </li>
             <li>
-              <Link href="/monitor" className="hover:text-white">
+              <Link href="/monitor" className="text-white hover:text-black font-semibold">
                 Monitor
               </Link>
             </li>
             <li>
-              <Link href="/others" className="hover:text-white">
+              <Link href="/others" className="text-white hover:text-black font-semibold">
                 Others
               </Link>
             </li>
@@ -66,10 +66,9 @@ const Header = () => {
               <li>
                 <button
                   onClick={() => {
-                    signOut({ callbackUrl: "http://localhost:3000/" });
-                    // router.push("http://localhost:3000");
+                    signOut({ callbackUrl: "https://pc-build-client-shapna28.vercel.app/" });
                   }}
-                  className="hover:text-white bg-blue-800 outline-none text-gray-300 "
+                  className="text-white hover:text-black font-semibold bg-blue-800 outline-none "
                 >
                   Log out
                 </button>
@@ -79,7 +78,7 @@ const Header = () => {
               <li>
                 <button
                   onClick={logout}
-                  className="hover:text-white bg-blue-800 outline-none text-gray-300 "
+                  className="text-white hover:text-black font-semibold bg-blue-800 outline-none "
                 >
                   Log out
                 </button>
