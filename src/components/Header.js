@@ -83,31 +83,6 @@ const Header = () => {
                 Others
               </Link>
             </li>
-            {session?.user && (
-              <li>
-                <button
-                  onClick={() => {
-                    signOut({
-                      callbackUrl:
-                        "https://pc-build-client-shapna28.vercel.app/",
-                    });
-                  }}
-                  className="text-black hover:text-black font-semibold"
-                >
-                  Log out
-                </button>
-              </li>
-            )}
-            {user?.email && (
-              <li>
-                <button
-                  onClick={logout}
-                  className="text-black hover:text-black font-semibold"
-                >
-                  Log out
-                </button>
-              </li>
-            )}
           </ul>
         </div>
         <Link href="/build-pc">
@@ -116,12 +91,31 @@ const Header = () => {
             Build
           </button>
         </Link>
-        <Link
-          href="/login"
-          className="bg-blue-600 text-white font-bold p-2 rounded-md cursor-pointer"
-        >
-          Login
-        </Link>
+        {user ? (
+          <button
+            onClick={() => logout()}
+            className="h-8 w-24 bg-gradient-to-r from-violet-500 to-fuchsia-500 border border-none text-white font-bold cursor-pointer"
+          >
+            Log Out
+          </button>
+        ) : (
+          <div>
+            {session?.user ? (
+              <button
+                onClick={() => sessionOut(session)}
+                className="h-8 w-24 bg-gradient-to-r from-violet-500 to-fuchsia-500 border border-none text-white font-bold cursor-pointer"
+              >
+                Log Out
+              </button>
+            ) : (
+              <Link href="/login">
+                <button className="h-8 w-24 bg-gradient-to-r from-violet-500 to-fuchsia-500 border border-none text-white font-bold cursor-pointer">
+                  Login
+                </button>
+              </Link>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
